@@ -1,0 +1,17 @@
+{
+  "presets": ["env", "stage-0"],
+  
+  // ignore 就是表示忽略文件，解决严格模式
+  "ignore":["./src/lib/mui/js/mui.min.js"],
+
+  "plugins": ["transform-runtime", ["component", [
+    {
+      "libraryName": "mint-ui",
+      "style": true
+    }
+  ]],]
+}
+// 这个文件放在根目录下面设置转码规则的。
+// 例如要想在代码中使用es6，就要在这个文件中配置"presets": ["es2015"]。
+// 在项目代码中要使用jsx语法除了安装babel-plugin-transform-vue-jsx插件之外，
+// 还要配置"plugins": ["transform-runtime", "transform-vue-jsx"]。
